@@ -13,6 +13,15 @@ Esta calculadora é uma aplicação web simples que permite realizar operações
 - Resultados precisos e exibição em tempo real das expressões matemáticas inseridas.
 - O cálculo é realizado usando a função eval() do JavaScript.
 
+
+#### Instruções de uso:
+
+- Abra o arquivo index.html em qualquer navegador web ou entre pelo <a href='https://thiago-weslley.github.io/DevCalculator/'>link<a/>.
+- Utilize os botões numéricos e operadores para inserir as expressões matemáticas desejadas.
+- O resultado será exibido na área de texto.
+- Use o botão "C" para limpar a calculadora.
+- Use o botão "<" para apagar o último caractere inserido.
+
 <br>
 
 ## 💻 Tecnologias Utilizadas
