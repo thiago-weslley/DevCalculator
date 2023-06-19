@@ -1,27 +1,28 @@
+const resultElement = document.querySelector('#result');
+
 const insert = (number) => {
-    const resultElement = document.querySelector('#result');
-    const expression = resultElement.innerHTML;
+    const expression = resultElement.value;
     const lastChar = expression[expression.length - 1];
 
     if (!isOperator(lastChar) || !isOperator(number)) {
-        resultElement.innerHTML = expression + number;
+        resultElement.value = expression + number;
     }
 }
 
 const clean = () => {
-    document.querySelector('#result').innerHTML = '';
+    resultElement.value = '';
 }
 
 const backspace = () => {
-    let result = document.querySelector('#result').innerHTML;
-    document.querySelector('#result').innerHTML = result.substring(0, result.length - 1);
+    let result = resultElement.value;
+    resultElement.value = result.substring(0, result.length - 1);
 }
 
 const calculate = () => {
-    let result = document.querySelector('#result').innerHTML;
+    let result = resultElement.value;
 
     if (result) {
-        document.querySelector('#result').innerHTML = eval(result);
+        resultElement.value = eval(result);
     }
 }
 
