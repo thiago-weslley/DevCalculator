@@ -1,6 +1,11 @@
 const insert = (number) => {
-    const num = document.querySelector('#result').innerHTML;
-    document.querySelector('#result').innerHTML = num + number;
+    const resultElement = document.querySelector('#result');
+    const expression = resultElement.innerHTML;
+    const lastChar = expression[expression.length - 1];
+
+    if (!isOperator(lastChar) || !isOperator(number)) {
+        resultElement.innerHTML = expression + number;
+    }
 }
 
 const clean = () => {
@@ -9,7 +14,7 @@ const clean = () => {
 
 const backspace = () => {
     let result = document.querySelector('#result').innerHTML;
-    document.querySelector('#result').innerHTML = result.substring(0, result.length -1);
+    document.querySelector('#result').innerHTML = result.substring(0, result.length - 1);
 }
 
 const calculate = () => {
@@ -18,4 +23,8 @@ const calculate = () => {
     if (result) {
         document.querySelector('#result').innerHTML = eval(result);
     }
+}
+
+const isOperator = (char) => {
+    return ['+', '-', '*', '/', '.'].includes(char);
 }
